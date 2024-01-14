@@ -151,6 +151,13 @@
             text-align: center;
     }
 
+        .inside_heading-social-icons{
+            align-items:center;
+            margin-right: 0cm;
+            margin-bottom: 1pc;
+            justify-content: center;
+        }
+
     
 
         /* Media queries for responsive design */
@@ -190,12 +197,24 @@
                 width: 100%;
                 margin: 0;
             }          
+
+            .inside_heading-social-icons img {
+                align-items: center;
+                margin: auto;
+                margin-bottom: 1%; /* Adjust the spacing between icons */
+            }
         }
+
+        /* New style for horizontal icons and names */
+            .inside_heading-social-icons {
+                display: flex;
+                align-items: center;
+            }
+        
     </style>
 </head>
 
 <body>
-
     <section>
         <div class="details">
             <div>
@@ -259,14 +278,33 @@
                 </div>
             </div>
         </div>
+        <div class="row inside_heading-social-icons">
+                <div class="inside_heading-social-icons">
+                    <!-- GitHub -->
+                    <a href="https://github.com/Akasharun12" target="_blank">
+                        <img src="github.gif" alt="GitHub Logo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/akash-gunasekar-859b48199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                        <img src="linked.png" alt="LinkedIn Logo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- Email -->
+                    <a href="mailto:akashguna51@gmail.com">
+                        <img src="email.gif" alt="Email Logo" style="width: 50px; height: 50px;">
+                    </a>
+                    <!-- WhatsApp (replace XXXXXXXXXXXX with your actual phone number) -->
+                    <a href="https://wa.me/6379508387" target="_blank">
+                        <img src="whatsapp.gif" alt="WhatsApp Logo" style="width: 50px; height: 50px;">
+                    </a>  
+
+                </div>
+            </div>
 
         <div class="details center-text">
-            &copy; 2024 Akash - AI Developer 
+            &copy; 2024 Akash - AI Developer
         </div>
 
     </section>
-
-    
 
 </body>
 
