@@ -1,311 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Akash Portfolio</title>
-    <link rel="icon" type="image/png" href="BLue-modified.png">
+    <title>Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            padding: 0;
-            background-color: #d4cece;
-            
-        }
-
-
-        .details {
-            width: 95%;
-            margin: auto;
+        .header {
+            background-color: #26ba5f; /* Set your desired background color */
+            width: 100%;
+            height: 17vh; /* Set the height to 17% of the viewport height */
             display: flex;
-            align-items: center;
-            background-color: #062f57;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-            color: white;
-            cursor: pointer;
-            transition: box-shadow 0.3s ease-in-out;
-        }
-
-        .details:hover {
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
-        }
-
-        img {
-            max-width: 42%;
-            height: 42%;
-            border-radius: 50%;
-            border: 5px solid white;
-            transition: transform 0.3s ease-in-out;
-            margin-left: 50%;
-            margin-right: 50%;
-        }
-
-        img:hover {
-            transform: scale(1.04);
-        }
-
-        .inside_heading {
-            max-width: 70%;
-            color: rgb(250, 249, 249);
-            padding-left: 20px;
-            margin-right: 32%;
-        }
-
-        .inside_heading p {
-            color: rgb(252, 251, 251);
-        }
-
-        h1 {
-            margin-bottom: 10px;
-            max-width: 66%;
-        }
-
-        section {
-            max-width: 95%;
-            max-width: 1200px;
-            margin: 2em auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
-            text-align: left;
-            overflow: hidden;
-        }
-
-            .description-content {
-                color: #062f57;
-        }
-
-            .skills-content{
-                color: #062f57;
-
-            }
-            .education-content{
-                color: #062f57;
-
-            }
-
-            .project-content{
-                color: #062f57;
-            }
-
-
-        p {
-            line-height: 1.6;
-            color: #555;
-            text-align: justify;
-        }
-
-        .box {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out;
-        }
-
-        .box:hover {
-            box-shadow: 0 0 15px rgba(139, 129, 169, 0.6);
-            background-color: #f4cba7;
-            color: white;
-        }
-
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .column {
-            width: 48%;
-            margin: 1%;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .column:hover {
-            transform: translateY(-5px);
-        }
-
-        .inside_heading p {
-            transition: none;
-        }
-
-        .resume-download {
-            display: inline-block;
-            background-color: #4caf50;
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 4px;
-        }
-
-        .center-text {
-            flex-direction: column;
-            text-align: center;
-    }
-
-        .inside_heading-social-icons{
-            align-items:center;
-            margin-right: 0cm;
-            margin-bottom: 1pc;
             justify-content: center;
+            align-items: center;
         }
 
-    
-
-        /* Media queries for responsive design */
-        @media screen and (max-width: 600px) {
-            .details {
-                flex-direction: column;
-                align-items: center;
-                margin-right: 1500pc;
-                padding: 20px;
-                width: 93%;
-            }
-
-            section{
-                flex-direction: column;
-                align-items: center;
-                display: flex;
-            }
-
-            img {
-                max-width: 100%;
-                margin-left: 0;
-                margin-bottom: 20px;
-            }
-
-
-            .inside_heading {
-                max-width: 100%;
-                margin-right: 0;
-            }
-
-            h1 {
-                max-width: 80%;
-                margin-bottom: 10px;
-            }
-
-            .column {
-                width: 100%;
-                margin: 0;
-            }          
-
-            .inside_heading-social-icons img {
-                align-items: center;
-                margin: auto;
-                margin-bottom: 1%; /* Adjust the spacing between icons */
-            }
+        .transparent-btn {          
+            background-color: transparent;
+            border: none;
+            color: #000;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin: 0 1rem 0 0; /* Added space between buttons by adjusting the right margin */
+            position: relative; /* Added to position the underline */
         }
 
-        /* New style for horizontal icons and names */
-            .inside_heading-social-icons {
-                display: flex;
-                align-items: center;
-            }
-        
+        .transparent-btn::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px; /* Adjust the distance of the underline as needed */
+            width: 100%;
+            height: 2px; /* Thickness of the underline */
+            background-color: rgb(255, 255, 255); /* Color of the underline */
+        }
     </style>
 </head>
-
 <body>
-    <section>
-        <div class="details">
-            <div>
-                <img src="output_image_circle_cropped_inside_black.png" alt="Cropped Image">
+    <header class="header">
+        
+            <div class="btn-container">
+                <!-- <button class="transparent-btn" onclick="showContent('stepsContent')">SOURCE CODE</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">INPUT</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">TECHNIQUES</button>
+                <button class="transparent-btn" onclick="showContent('stepsContent')">MODALS</button>
+                <button class="transparent-btn" onclick="navigateTo('display_steps')">STEPS</button> -->
+                <button class="transparent-btn" onclick="navigateTo('display_source')"><i class="fas fa-bars"></i> Menu</button> 
             </div>
-            <div class="inside_heading">
-                <h1>Akash Gunasekar  Aspiring AI Developer</h1>
-                <p>Email : akashguna51@gmail.com</p>
-                <p>Phone Number : +91 6379508387</p>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <div class="box details-box description">
-                    <h2 class="description-content">Description</h2>
-                    <p>
-                        I'm Akash, an AI Developer. I love using smart technology to create cool solutions. I know a lot about computers Science and am always excited about the newest tech. My goal is to help make AI even better, pushing it to do more awesome things.</p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="box details-box skills">
-                    <h2 class="skills-content">Download CV</h2>
-                    <p>
-                        I have attached my resume for your reference , offering an extensive overview of my qualifications and professional journey. I invite you to review it for a more in-depth understanding of my skills and experiences. Furthermore, kindly access the following link to download a copy for your convenience. Your consideration is greatly appreciated.
-                    </p>
-                    <a href="Akash(1)Resume.pdf" download class="resume-download" download>Click Here</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <div class="box details-box education">
-                    <h2 class="education-content">Education</h2>
-                    <p><strong>2021-2024:</strong> Mahendra Engineering College, Namakkal<br>B.TECH Artificial Intelligence and Data Science<br>Upto 6th Sem 8.72%</p>
-                    <p><strong>2018-2021:</strong> Dhanalakshmi Srinivasan Polytechnic College, Perambalur<br>Diploma in Electrical and Electronics engineering<br>Diploma 92%</p>
-                    <p><strong>2017-2018:</strong> SSLC Sri Ram Matriculation Higher Secondary School, Cuddalore<br>SSLC 85%</p>
-                </div>
-            </div>
-
-            <div class="column">
-                <div class="box details-box skills">
-                    <h2 class="skills-content">Skills</h2>
-                    <p>- Artificial Intelligence</p>
-                    <p>- Machine Learning</p>
-                    <p>- Natural Language Processing</p>
-                    <p>- Deep Learning</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="column">
-                <div class="box details-box projects">
-                    <h2 class="project-content">Projects</h2>
-                    <p><strong> 1. <u>Smart Attendance Management System</u> - </strong> It is designed to streamline the process of storing and retrieving employee information within an organization. The user interface can be developed using Python frameworks such as Tkinter. To store the employee data, Python offers a relational database management system (RDBMS) like MySQL, Heidi SQL.</p>
-                    <p><strong>2. <u>LogIN Registration form with Database Connectivity</u> -</strong> It aims to streamline the attendance tracking by automatically recognizing faces, notifying administrators via text messages, and providing voice alerts for real-time updates. Smart Attendance Management System that harnesses the power of OpenCV Deep Learning, a popular computer vision library, and an email integration to create a sophisticated and automated solution.</p>
-                    <!-- Add more projects as needed -->
-                </div>
-            </div>
-        </div>
-        <div class="row inside_heading-social-icons">
-                <div class="inside_heading-social-icons">
-                    <!-- GitHub -->
-                    <a href="https://github.com/Akasharun12" target="_blank">
-                        <img src="github.gif" alt="GitHub Logo" style="width: 50px; height: 50px;">
-                    </a>
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/akash-gunasekar-859b48199?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
-                        <img src="linked1.gif" alt="LinkedIn Logo" style="width: 50px; height: 50px;">
-                    </a>
-                    <!-- Email -->
-                    <a href="mailto:akashguna51@gmail.com">
-                        <img src="email.gif" alt="Email Logo" style="width: 50px; height: 50px;">
-                    </a>
-                    <!-- WhatsApp (replace XXXXXXXXXXXX with your actual phone number) -->
-                    <a href="https://wa.me/6379508387" target="_blank">
-                        <img src="whatsapp.gif" alt="WhatsApp Logo" style="width: 50px; height: 50px;">
-                    </a>  
-
-                </div>
-            </div>
-
-        <div class="details center-text">
-            &copy; 2024 Akash - AI Developer
-        </div>
-
-    </section>
-
+    </header>
+    <script>
+        function navigateTo(url) {
+            window.location.href = '/' + url;
+        }
+    </script>
 </body>
-
 </html>
